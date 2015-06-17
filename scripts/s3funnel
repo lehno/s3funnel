@@ -189,10 +189,6 @@ def main():
     if (operation == 'list' or operation == 'ls') and not bucket:
         operation = 'show'
 
-    if options.add_prefix and options.del_prefix:
-        parser.error("--add-prefix and --del-prefix options are mutually exclusive")
-        return -1
-
     if operation == 'copy' and not options.source_bucket:
         parser.error("Source bucket not specified")
         return -1
